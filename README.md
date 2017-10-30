@@ -1,9 +1,10 @@
 # ml
-class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, weights=’uniform’, algorithm=’auto’, leaf_size=30, p=2, metric=’minkowski’, metric_params=None, n_jobs=1, **kwargs)
+# class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, weights=’uniform’, algorithm=’auto’, leaf_size=30, p=2, metric=’minkowski’, metric_params=None, n_jobs=1, **kwargs)
 
 Классификатор реализующий выбор к-ближайших соседей:
 
 Параметры:
+
 n_neighbors(n-соседей): целое число, опциональный параметр (по умолчанию значение = 5)
 weights - вызываемый, необязательный параметр (по умолчанию 'uniform')
  	uniform - все точки из каждого класса весят одинаково;
