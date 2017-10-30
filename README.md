@@ -1,3 +1,7 @@
+![alt text](https://raw.githubusercontent.com/Katrin96/ml/master/knn1.png)
+![alt text](https://raw.githubusercontent.com/Katrin96/ml/master/knn2.png)
+
+
 # sklearn.neighbors.KNeighborsClassifier
 ```
 class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, weights=’uniform’, 
