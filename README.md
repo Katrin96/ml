@@ -1,5 +1,5 @@
-![alt text](https://raw.githubusercontent.com/Katrin96/ml/master/knn1.png)
-![alt text](https://raw.githubusercontent.com/Katrin96/ml/master/knn2.png)
+![alt text](https://raw.githubusercontent.com/Katrin96/ml/master/knn1.jpg)
+![alt text](https://raw.githubusercontent.com/Katrin96/ml/master/knn2.jpg)
 
 
 # sklearn.neighbors.KNeighborsClassifier
