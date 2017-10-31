@@ -67,26 +67,27 @@ p = 2 ~ euclidean_distance (l2)
 Число параллельных вычислений для поиска соседей. Если данный параметр равен -1 то число вычислений устанавливается по количеству ядер процессора.
 
 ## Пример:
- > X = [[0], [1], [2], [3]]
+``` phyton
+ >>> X = [[0], [1], [2], [3]]
  
- > y = [0, 0, 1, 1]
+ >>> y = [0, 0, 1, 1]
  
- > from sklearn.neighbors import KNeighborsClassifier
+ >>> from sklearn.neighbors import KNeighborsClassifier
  
- > neigh = KNeighborsClassifier(n_neighbors=3)
+ >>> neigh = KNeighborsClassifier(n_neighbors=3)
  
- > neigh.fit(X, y) 
+ >>> neigh.fit(X, y) 
  
  KNeighborsClassifier(...)
  
- > print(neigh.predict([[1.1]]))
+ >>> print(neigh.predict([[1.1]]))
  
  [0]
  
- > print(neigh.predict_proba([[0.9]]))
+ >>> print(neigh.predict_proba([[0.9]]))
  
  [[ 0.66666667  0.33333333]]
-
+```
 ## Методы
 
 `fit(X, y)` - подстраивает модель, использую Х как обучающую выборку , а y как целевые значения.
@@ -162,31 +163,31 @@ kneighbors(X=None, n_neighbors=None, return_distance=True)
 ## Примеры
 
 В следующем примере мы строим класс NeighborsClassifier из массива, представляющего наш набор данных, и спрашиваем, кто ближайший к [1,1,1]
+``` phypon
+>>> samples = [[0., 0., 0.], [0., .5, 0.], [1., 1., .5]]
 
-> samples = [[0., 0., 0.], [0., .5, 0.], [1., 1., .5]]
+>>> from sklearn.neighbors import NearestNeighbors
 
-> from sklearn.neighbors import NearestNeighbors
+>>> neigh = NearestNeighbors(n_neighbors=1)
 
-> neigh = NearestNeighbors(n_neighbors=1)
-
-> neigh.fit(samples) 
+>>> neigh.fit(samples) 
 
 NearestNeighbors(algorithm='auto', leaf_size=30, ...)
 
-> print(neigh.kneighbors([[1., 1., 1.]])) 
+>>> print(neigh.kneighbors([[1., 1., 1.]])) 
 
 (array([[ 0.5]]), array([[2]]...))
-
+```
 
  Как вы можете видеть, он возвращает [[0.5]] и [[2]], что означает, что элемент находится на расстоянии 0,5 и является третьим элементом образцов (индексы начинаются с 0). Вы также можете запросить несколько точек:
- 
-> X = [[0., 1., 0.], [1., 0., 1.]]
+``` phyton
+>>> X = [[0., 1., 0.], [1., 0., 1.]]
 
-> neigh.kneighbors(X, return_distance=False) 
+>>> neigh.kneighbors(X, return_distance=False) 
 
 array([[1],
        [2]]...)
-
+```
 ```
 kneighbors_graph(X=None, n_neighbors=None, mode=’connectivity’)
 ```
@@ -214,18 +215,18 @@ kneighbors_graph(X=None, n_neighbors=None, mode=’connectivity’)
 n_samples_fit - количество выборок в данных, которые были установлены в A [i, j], присваивается вес ребра, соединяющего i с j.
 
 ### Примеры:
-
-> X = [[0], [3], [1]]
-> from sklearn.neighbors import NearestNeighbors
-> neigh = NearestNeighbors(n_neighbors=2)
-> neigh.fit(X) 
+```phyton
+>>> X = [[0], [3], [1]]
+>>> from sklearn.neighbors import NearestNeighbors
+>>> neigh = NearestNeighbors(n_neighbors=2)
+>>> neigh.fit(X) 
 NearestNeighbors(algorithm='auto', leaf_size=30, ...)
 > A = neigh.kneighbors_graph(X)
 > A.toarray()
 array([[ 1.,  0.,  1.],
        [ 0.,  1.,  1.],
        [ 1.,  0.,  1.]])
-
+```
 ```
 predict( X )
 ```
