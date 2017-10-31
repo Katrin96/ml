@@ -67,7 +67,7 @@ p = 2 ~ euclidean_distance (l2)
 Число параллельных вычислений для поиска соседей. Если данный параметр равен -1 то число вычислений устанавливается по количеству ядер процессора.
 
 ## Пример:
-``` phyton
+```python
  >>> X = [[0], [1], [2], [3]]
  
  >>> y = [0, 0, 1, 1]
@@ -163,7 +163,7 @@ kneighbors(X=None, n_neighbors=None, return_distance=True)
 ## Примеры
 
 В следующем примере мы строим класс NeighborsClassifier из массива, представляющего наш набор данных, и спрашиваем, кто ближайший к [1,1,1]
-``` phypon
+```python
 >>> samples = [[0., 0., 0.], [0., .5, 0.], [1., 1., .5]]
 
 >>> from sklearn.neighbors import NearestNeighbors
@@ -180,7 +180,7 @@ NearestNeighbors(algorithm='auto', leaf_size=30, ...)
 ```
 
  Как вы можете видеть, он возвращает [[0.5]] и [[2]], что означает, что элемент находится на расстоянии 0,5 и является третьим элементом образцов (индексы начинаются с 0). Вы также можете запросить несколько точек:
-``` phyton
+```python
 >>> X = [[0., 1., 0.], [1., 0., 1.]]
 
 >>> neigh.kneighbors(X, return_distance=False) 
@@ -215,7 +215,7 @@ kneighbors_graph(X=None, n_neighbors=None, mode=’connectivity’)
 n_samples_fit - количество выборок в данных, которые были установлены в A [i, j], присваивается вес ребра, соединяющего i с j.
 
 ### Примеры:
-```phyton
+```python
 >>> X = [[0], [3], [1]]
 >>> from sklearn.neighbors import NearestNeighbors
 >>> neigh = NearestNeighbors(n_neighbors=2)
