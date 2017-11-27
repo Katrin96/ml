@@ -120,6 +120,8 @@ __init__(n_neighbors=5, weights=’uniform’, algorithm=’auto’, leaf_size=3
 metric_params=None, n_jobs=1, **kwargs)
 ```
 
+---
+
 ```
 fit(X, y)
 ```
@@ -132,6 +134,8 @@ fit(X, y)
 
 **y** : *{array-like, sparse matrix}*. Целевые значения формы = [n_samples] или [n_samples, n_outputs] 
 
+---
+
 ```
 get_params(deep=True)
 ```
@@ -142,6 +146,8 @@ get_params(deep=True)
 #### Возвращает: 
 
 **params**: Имена параметров отображаются на их значения. 
+
+---
 
 ```
 kneighbors(X=None, n_neighbors=None, return_distance=True)
@@ -201,6 +207,7 @@ array([[1],
        [2]]...)
 ```
 
+---
 
 ```
 kneighbors_graph(X=None, n_neighbors=None, mode=’connectivity’)
@@ -242,6 +249,7 @@ array([[ 1.,  0.,  1.],
        [ 1.,  0.,  1.]])
 ```
 
+---
 
 ```
 predict( X )
@@ -261,6 +269,8 @@ predict( X )
 
 Классы для каждого образца данных.
 
+---
+
 ```
 predict_proba( X )
 ```
@@ -278,10 +288,12 @@ predict_proba( X )
 **p** : массив, состояние = [n_samples, n_classes] или список n_outputs
 таких массивов, если n_outputs> 1. Вероятности класса входных выборок. Классы упорядочиваются по лексикографическому порядку.
 
+---
+
 ```
 score( X , y , sample_weight = None )
 ```
-***
+
 Возвращает среднюю точность данных данных и меток.
 
 В классификации с несколькими метками это точность подмножества, которая является жесткой метрикой, поскольку для каждого 		образца требуется, чтобы каждый набор меток был правильно предсказан.
@@ -305,6 +317,8 @@ score( X , y , sample_weight = None )
 **score** : float
 
 Средняя точность self.predict (X) wrt. у.
+
+---
 
 ```
 set_params( ** params )
